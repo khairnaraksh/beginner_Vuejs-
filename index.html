@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue1</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src ="https://unpkg.com/vue">
+    </script>
+  </head>
+  <body>
+    <div id="vue-app">
+      <p>job: {{ job }}</p>
+      <h1>{{ greet('morning') }}</h1>       //function
+      <a v-bind:href="website">google</a>   //data bind
+      <input type="text" v-bind:value="name"  >
+      <p v-html="websiteTag"></p>
+      <p>Events</p>
+      <button @click.once="add(1)">add year</button>
+      <button @click="sub(1)">subtract year</button>
+      <button v-on:dblclick="add(10)">add 10 year</button>
+      <button v-on:dblclick="sub(10)">Subtract 10 year</button>
+      <p>my age is:{{ age }}</p>
+    <div id="canvas" v-on:mousemove=updateXY>{{x}},{{y}}</div>
+    <a v-on:click.prevent="click" href="https://youtube.com">YOUTUBE</a>
+  </div>
+    <script src="app.js"></script>
+  </body>
+</html>
